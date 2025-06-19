@@ -1,0 +1,32 @@
+# Example terraform.tfvars file
+# Copy this to terraform.tfvars and modify as needed
+
+# AWS Region (Canadian region)
+aws_region = "ca-central-1"
+
+# VPC Configuration (REQUIRED)
+vpc_id = "vpc-0a95a35dd1bd79793"
+
+# Private Subnet Configuration
+# Option 1: Use existing private subnets
+private_subnet_ids = ["subnet-12345678", "subnet-87654321"]
+
+# Option 2: Create new private subnets in the existing VPC
+# (Leave private_subnet_ids empty or commented out)
+# private_subnet_cidrs = ["10.0.1.0/24", "10.0.2.0/24"]
+
+# EC2 Configuration (ARM-based instance)
+instance_type = "t4g.micro"
+
+# SSH Access Configuration
+# Uncomment and set your IP address to allow SSH access to Blue instance
+# blue_ingress_ip = "192.168.1.100/32"  # Your IP address with /32 for single IP
+# blue_ingress_ip = "10.0.0.0/16"       # Or use a CIDR block
+
+# Tags
+tags = {
+  Environment = "dev"
+  Project     = "technical-assessment-blue-orange-ec2"
+  ManagedBy   = "terraform"
+  Owner       = "Mohamed Bouchenafa"
+}
