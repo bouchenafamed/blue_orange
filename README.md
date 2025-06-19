@@ -5,12 +5,19 @@ This Terraform configuration provisions two EC2 instances named "blue" and "oran
 ## Features
 
 ✅ **Latest Ubuntu 24.04 LTS ARM64 AMI**: Automatically fetches the most recent stable Ubuntu 24.04 ARM64 AMI
+
 ✅ **Private Subnet Deployment**: Both instances are deployed in private subnets
+
 ✅ **Controlled SSH Access**: Blue can SSH to Orange, Orange cannot SSH to Blue
+
 ✅ **Optional External Access**: Can allow SSH to Blue from specified IP address or from resources that have blue security group
+
 ✅ **Flexible Subnet Support**: Works with existing private subnets or creates new ones in existing VPC
+
 ✅ **Multi-Region Support**: Can be deployed to any AWS region (default: ca-central-1)
+
 ✅ **ARM Architecture**: Uses t4g.micro instances for cost efficiency
+
 ✅ **Auto SSH Keys**: Automatically generates secure SSH key pairs
 
 ## Prerequisites
